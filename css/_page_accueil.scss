@@ -1,0 +1,33 @@
+#page_accueil main {
+  display: flex;
+  justify-content: center;
+}
+#page_accueil .accueil_main_div {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  max-width: 980px;
+  width: 100%;
+  align-self: center;
+  background-color: darkgreen;
+  gap: 50px;
+
+  & .accueil_sec1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    iframe {
+      border: 0;
+    }
+    h1 {
+      text-transform: uppercase;
+      font-weight: 800;
+      margin: 20px;
+      font-size: 3rem;
+    }
+  }
+
+  & .accueil_sec2 {
+    background-color: yellow;
+  }
+}

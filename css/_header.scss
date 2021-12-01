@@ -1,0 +1,62 @@
+header {
+  height: 300px;
+  width: 100vw;
+  max-width: 100%;
+  max-height: 300px;
+  min-width: 800px;
+
+  background: url("../img/banner.jpeg") no-repeat center top;
+  background-size: cover;
+  background-position-y: center;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  & > h1 {
+    //cacher le titre
+    text-indent: -50vw;
+    overflow: hidden;
+  }
+
+  & > nav {
+    & > ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding-right: 100px;
+
+      & .active,
+      & > li:hover,
+      & > li:active {
+        background-color: #fff;
+        & a {
+          color: black;
+          text-shadow: none;
+        }
+      }
+
+      & > li {
+        display: flex;
+        height: 30px;
+        width: 140px;
+        justify-content: center;
+
+        & > a {
+          justify-self: center;
+          align-self: center;
+
+          text-decoration: none;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 500;
+          color: white;
+
+          text-transform: uppercase;
+          //on voit pas bien sur le fond du coup j'dois mettre ce truc
+          text-shadow: rgb(119, 119, 119) 0.5px 0.5px;
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Oswald:wght@500;600;700&display=swap");
 *,
 ::before,
 ::after {
@@ -7,26 +8,292 @@
   margin: 0;
 }
 
-#home_pg > header {
-  height: 300px;
-  background: #000 url("../img/banner.jpeg") no-repeat center top;
-  background-size: cover;
-  background-position-y: center;
+:root {
+  font-size: 15px;
 }
 
-#home_pg > header > nav > ul {
+h1 {
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+}
+
+p {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
   height: 300px;
-  text-decoration: none;
-  list-style: none;
+  width: 100vw;
+  max-width: 100%;
+  max-height: 300px;
+  min-width: 800px;
+  background: url("../img/banner.jpeg") no-repeat center top;
+  background-size: cover;
+  background-position-y: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header > h1 {
+  text-indent: -50vw;
+  overflow: hidden;
+}
+
+header > nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 20px;
+  padding-right: 100px;
+}
+
+header > nav > ul .active,
+header > nav > ul > li:hover,
+header > nav > ul > li:active {
+  background-color: #fff;
+}
+
+header > nav > ul .active a,
+header > nav > ul > li:hover a,
+header > nav > ul > li:active a {
+  color: black;
+  text-shadow: none;
+}
+
+header > nav > ul > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  width: 140px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header > nav > ul > li > a {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: #777777 0.5px 0.5px;
+}
+
+#page_accueil main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#page_accueil .accueil_main_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: center;
+  max-width: 980px;
+  width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background-color: darkgreen;
+  gap: 50px;
+}
+
+#page_accueil .accueil_main_div .accueil_sec1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#page_accueil .accueil_main_div .accueil_sec1 iframe {
+  border: 0;
+}
+
+#page_accueil .accueil_main_div .accueil_sec1 h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 20px;
+  font-size: 3rem;
+}
+
+#page_accueil .accueil_main_div .accueil_sec2 {
+  background-color: yellow;
+}
+
+.page_album {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h1,
+h2 {
+  font-family: "Oswald", sans-serif;
+}
+
+.page_album > main {
+  max-width: 980px;
+  width: 100%;
+}
+
+.page_album > main > section > article {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 60px;
+}
+
+.page_album > main > section > article:nth-of-type(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-left: 30px;
+}
+
+.page_album > main > section > article > div {
+  margin: 0 30px;
+}
+
+.page_album > main > section > article > div > h2 {
+  text-transform: uppercase;
+  padding: 10px 0 25px 0;
+  font-size: 1.5rem;
+}
+
+.basique {
+  margin: 50px;
+}
+
+.basique > h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  padding: 10px 0 50px 0;
+  font-size: 2rem;
+}
+
+.social_list {
+  list-style-type: none;
+}
+
+.social_list > li > a {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+}
+
+.social_list > li > a:hover {
+  color: maroon;
+}
+
+.social_list > li > a i > * {
+  display: none;
+}
+
+.social_list > li > a i {
+  padding-bottom: 20px;
+}
+
+footer {
+  height: 140px;
+  width: 100vw;
+  max-width: 100%;
+  max-height: 300px;
+  min-width: 800px;
+  background-color: black;
+  background-size: cover;
+  background-position-y: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer > section > nav > ul {
+  list-style-type: none;
+  text-align: center;
+  list-style-type: none;
+  margin-top: 8px;
+  font-size: 12px;
+  font-style: bold;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer h1 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+footer .contact address {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  margin-top: 8px;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 8px !important;
+}
+
+footer > .dates > ul li {
+  text-align: center;
+  list-style-type: none;
+  font-size: 12px;
+  font-style: bold;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,67 @@
+.page_album {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1,
+h2 {
+  font-family: "Oswald", sans-serif;
+}
+
+.page_album > main {
+  max-width: 980px;
+  width: 100%;
+
+  & > section > article {
+    position: relative;
+    display: flex;
+    margin: 60px;
+
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+      margin-left: 30px;
+    }
+
+    & > div {
+      margin: 0 30px;
+      & > h2 {
+        text-transform: uppercase;
+        padding: 10px 0 25px 0;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.basique {
+  margin: 50px;
+
+  & > h1 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 10px 0 50px 0;
+    font-size: 2rem;
+  }
+}
+
+.social_list {
+  list-style-type: none;
+
+  & > li > a {
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+
+    &:hover {
+      color: rgb(128, 0, 0);
+    }
+    i > * {
+      display: none;
+    }
+    i {
+      padding-bottom: 20px;
+    }
+  }
+}
