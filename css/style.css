@@ -412,6 +412,7 @@ footer {
   max-width: 100%;
   min-width: 800px;
   background-color: black;
+  background: url("../img/footer_bg.jpeg") no-repeat bottom;
   background-size: cover;
   background-position-y: center;
   display: -webkit-box;
@@ -441,7 +442,6 @@ footer a {
 }
 
 footer h3 {
-  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-size: 1rem;
   margin-top: 30px;
@@ -576,131 +576,38 @@ footer > .dates > ul li {
   margin: 50px 0px;
 }
 
-#page_reservation main .formulaire .coordonnees {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 5px;
-  border: none;
-  border-top: solid black 2px;
-  min-width: 800px;
-  min-height: 200px;
-}
-
-#page_reservation main .formulaire .coordonnees legend {
-  margin-left: 80px;
-  padding: 0px 20px;
-  color: #991a1a;
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-
-#page_reservation main .formulaire .coordonnees div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-width: 500px;
-  padding-right: 100px;
-}
-
-#page_reservation main .formulaire .coordonnees div label {
-  padding-right: 15px;
-}
-
-#page_reservation main .formulaire .coordonnees input {
-  height: 25px;
-  width: 200px;
-}
-
-#page_reservation main .formulaire .votre_ticket {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 5px;
-  min-width: 800px;
-  min-height: 200px;
-  border: none;
-  border-top: solid black 2px;
-}
-
-#page_reservation main .formulaire .votre_ticket legend {
-  margin-left: 80px;
-  padding: 0px 20px;
-  color: #991a1a;
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-
-#page_reservation main .formulaire .votre_ticket div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-width: 500px;
-  padding-right: 100px;
-}
-
-#page_reservation main .formulaire .votre_ticket div label {
-  padding-right: 15px;
-}
-
-#page_reservation main .formulaire .votre_ticket div input,
-#page_reservation main .formulaire .votre_ticket div select {
-  width: 200px;
-  height: 25px;
-}
-
+#page_reservation main .formulaire .coordonnees,
+#page_reservation main .formulaire .votre_ticket,
 #page_reservation main .formulaire .creation_compte {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 5px;
-  min-width: 800px;
-  min-height: 150px;
+  gap: 10px;
   border: none;
-  border-top: solid black 2px;
+  border-top: solid #dadada 2px;
+  min-width: 800px;
+  min-height: 200px;
 }
 
+#page_reservation main .formulaire .coordonnees legend,
+#page_reservation main .formulaire .votre_ticket legend,
 #page_reservation main .formulaire .creation_compte legend {
-  margin-left: 80px;
+  margin-left: 30px;
   padding: 0px 20px;
   color: #991a1a;
   font-size: 30px;
   margin-bottom: 15px;
 }
 
+#page_reservation main .formulaire .coordonnees div,
+#page_reservation main .formulaire .votre_ticket div,
 #page_reservation main .formulaire .creation_compte div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -715,17 +622,23 @@ footer > .dates > ul li {
   padding-right: 100px;
 }
 
+#page_reservation main .formulaire .coordonnees div label,
+#page_reservation main .formulaire .votre_ticket div label,
 #page_reservation main .formulaire .creation_compte div label {
   padding-right: 15px;
 }
 
-#page_reservation main .formulaire .creation_compte div input,
-#page_reservation main .formulaire .creation_compte div select {
-  width: 200px;
+#page_reservation main .formulaire .coordonnees input,
+#page_reservation main .formulaire .coordonnees select,
+#page_reservation main .formulaire .votre_ticket input,
+#page_reservation main .formulaire .votre_ticket select,
+#page_reservation main .formulaire .creation_compte input,
+#page_reservation main .formulaire .creation_compte select {
   height: 25px;
+  width: 200px;
 }
 
 #page_reservation main .formulaire .button_end {
-  margin: 50px 0 90px 0;
+  margin: 0px 0 90px 0;
 }
 /*# sourceMappingURL=style.css.map */
