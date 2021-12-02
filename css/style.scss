@@ -8,33 +8,95 @@
   margin: 0;
 }
 
+$bg-color1: rgb(153, 26, 26);
+$bg-color2: white;
+$fg-color1: rgb(153, 26, 26);
+$fg-color2: white;
+
 :root {
-  font-size: 15px;
+  font-size: 16px;
 }
 h1,
 h2,
 h3 {
   font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 h3 {
   font-size: 1rem;
 }
 
-p {
-  font-size: 1rem;
+p,
+a,
+td,
+th,
+label,
+legend {
   font-family: "Montserrat", sans-serif;
+}
+
+legend {
+  text-transform: uppercase;
+}
+
+.btn {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: $fg-color1;
+  border: 1px solid $fg-color1;
+  padding: 5px 10px;
+  background-color: $bg-color2;
+
+  &:hover {
+    background-color: $bg-color1;
+    color: $fg-color2;
+  }
+}
+
+.social_list {
+  position: fixed;
+  right: 0;
+  top: 10%;
+  width: 5em;
+  margin-top: -2.5em;
+  list-style-type: none;
+
+  & > li {
+    background-color: $fg-color2;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > a {
+      text-decoration: none;
+      color: black;
+      padding: 10px;
+
+      &:hover {
+        color: $fg-color1;
+      }
+      i > * {
+        display: none;
+      }
+    }
+  }
 }
 
 @import "./header";
 @import "./page_accueil";
 @import "./page_album";
 @import "./footer";
+@import "./page_reservation";

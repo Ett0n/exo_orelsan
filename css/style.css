@@ -9,30 +9,93 @@
 }
 
 :root {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 h1,
 h2,
 h3 {
   font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 h3 {
   font-size: 1rem;
 }
 
-p {
-  font-size: 1rem;
+p,
+a,
+td,
+th,
+label,
+legend {
   font-family: "Montserrat", sans-serif;
+}
+
+legend {
+  text-transform: uppercase;
+}
+
+.btn {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: #991a1a;
+  border: 1px solid #991a1a;
+  padding: 5px 10px;
+  background-color: white;
+}
+
+.btn:hover {
+  background-color: #991a1a;
+  color: white;
+}
+
+.social_list {
+  position: fixed;
+  right: 0;
+  top: 10%;
+  width: 5em;
+  margin-top: -2.5em;
+  list-style-type: none;
+}
+
+.social_list > li {
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social_list > li > a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.social_list > li > a:hover {
+  color: #991a1a;
+}
+
+.social_list > li > a i > * {
+  display: none;
 }
 
 header {
@@ -41,7 +104,7 @@ header {
   max-width: 100%;
   max-height: 300px;
   min-width: 800px;
-  background: url("../img/banner.jpeg") no-repeat center top;
+  background: url("../img/banner.webp") no-repeat center top;
   background-size: cover;
   background-position-y: center;
   display: -webkit-box;
@@ -56,7 +119,7 @@ header {
 }
 
 header > h1 {
-  text-indent: -50vw;
+  text-indent: -100vw;
   overflow: hidden;
 }
 
@@ -74,14 +137,17 @@ header > nav > ul {
   padding-right: 100px;
 }
 
+header > nav > ul > li:hover {
+  background-color: #991a1a;
+  color: white;
+}
+
 header > nav > ul .active,
-header > nav > ul > li:hover,
 header > nav > ul > li:active {
   background-color: #fff;
 }
 
 header > nav > ul .active a,
-header > nav > ul > li:hover a,
 header > nav > ul > li:active a {
   color: black;
   text-shadow: none;
@@ -134,7 +200,6 @@ header > nav > ul > li > a {
   width: 100%;
   -ms-flex-item-align: center;
       align-self: center;
-  background-color: darkgreen;
   gap: 50px;
 }
 
@@ -158,12 +223,136 @@ header > nav > ul > li > a {
 #page_accueil .accueil_main_div .accueil_sec1 h1 {
   text-transform: uppercase;
   font-weight: 800;
-  margin: 20px;
-  font-size: 3rem;
+  margin: 50px 0px;
 }
 
 #page_accueil .accueil_main_div .accueil_sec2 {
-  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 20px;
+}
+
+#page_accueil .accueil_main_div .accueil_sec2 .sec2_group_paragraphe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#page_accueil .accueil_main_div .accueil_sec2 .sec2_group_paragraphe h2 {
+  margin: 0px 0px 50px 0px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#page_accueil .accueil_main_div .accueil_sec2 .sec2_group_paragraphe p {
+  padding: 0px 30px 10px 0px;
+}
+
+#page_accueil .accueil_main_div .accueil_sec2 .sec2_group_paragraphe .para_buttons {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+#page_accueil .accueil_main_div .accueil_sec2 aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #991a1a;
+  min-width: 250px;
+  min-height: 400px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  padding: 20px 10px;
+}
+
+#page_accueil .accueil_main_div .accueil_sec2 aside img {
+  width: 200px;
+  height: 200px;
+}
+
+#page_accueil .accueil_main_div .accueil_sec2 aside li {
+  list-style-type: none;
+  padding-top: 12px;
+}
+
+#page_accueil .accueil_main_div .accueil_sec2 aside h3 {
+  font-size: 2rem;
+  color: white;
+  margin: 20px 0px 8px 0px;
+}
+
+#page_accueil .accueil_main_div .accueil_sec2 aside p {
+  display: inline;
+  margin-right: 5px;
+}
+
+#page_accueil .accueil_main_div .accueil_sec2 aside p.cat_titre {
+  color: white;
+}
+
+#page_accueil .accueil_main_div .accueil_sec3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#page_accueil .accueil_main_div .accueil_sec3 h2,
+#page_accueil .accueil_main_div .accueil_sec3 p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#page_accueil .accueil_main_div .accueil_sec3 h2 {
+  margin: 50px 0px;
+}
+
+#page_accueil .accueil_main_div .accueil_sec3 .groupe_album {
+  margin: 50px 0px 150px 0px;
+}
+
+#page_accueil .accueil_main_div .accueil_sec3 .groupe_album ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#page_accueil .accueil_main_div .accueil_sec3 .groupe_album li {
+  list-style-type: none;
+}
+
+#page_accueil .accueil_main_div .accueil_sec3 .groupe_album span {
+  display: none;
+}
+
+#page_accueil .accueil_main_div .accueil_sec3 .album_cover {
+  width: 180px;
+  height: 180px;
 }
 
 .page_album {
@@ -179,9 +368,9 @@ header > nav > ul > li > a {
           align-items: center;
 }
 
-h1,
-h2 {
-  font-family: "Oswald", sans-serif;
+.page_album img {
+  float: left;
+  margin: 0 30px 30px 0;
 }
 
 .page_album > main {
@@ -189,33 +378,21 @@ h2 {
   width: 100%;
 }
 
-.page_album > main > section > article {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 60px;
+.sirene {
+  float: right !important;
+  margin: 0 0 30px 30px !important;
 }
 
-.page_album > main > section > article:nth-of-type(even) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  margin-left: 30px;
+.album > article {
+  margin: 70px 0;
 }
 
-.page_album > main > section > article > div {
-  margin: 0 30px;
-}
-
-.page_album > main > section > article > div > h2 {
-  text-transform: uppercase;
-  padding: 10px 0 25px 0;
+.album > article > div > h2 {
+  padding-bottom: 25px;
 }
 
 .basique {
-  margin: 50px;
+  margin: 70px 0px;
 }
 
 .basique > h1 {
@@ -225,42 +402,14 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-transform: uppercase;
-  padding: 10px 0 50px 0;
-}
-
-.social_list {
-  position: fixed;
-  right: 0;
-  top: 75%;
-  width: 8em;
-  margin-top: -2.5em;
-  list-style-type: none;
-}
-
-.social_list > li > a {
-  text-decoration: none;
-  color: black;
-  padding: 20px;
-}
-
-.social_list > li > a:hover {
-  color: maroon;
-}
-
-.social_list > li > a i > * {
-  display: none;
-}
-
-.social_list > li > a i {
-  padding-bottom: 20px;
+  margin: 50px;
 }
 
 footer {
-  height: 140px;
+  height: 180px;
+  padding-bottom: 30px;
   width: 100vw;
   max-width: 100%;
-  max-height: 300px;
   min-width: 800px;
   background-color: black;
   background-size: cover;
@@ -268,6 +417,9 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   color: white;
@@ -291,7 +443,7 @@ footer a {
 footer h3 {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-  font-size: 0.5rem;
+  font-size: 1rem;
   margin-top: 30px;
   margin-bottom: 10px;
   text-align: center;
@@ -302,7 +454,10 @@ footer .contact address {
   font-style: italic;
   font-size: 12px;
   text-align: center;
-  margin-bottom: 8px !important;
+}
+
+footer .contact address a {
+  display: block;
 }
 
 footer > .dates > ul li {
@@ -310,5 +465,267 @@ footer > .dates > ul li {
   list-style-type: none;
   font-size: 12px;
   font-style: bold;
+}
+
+.required:after {
+  content: " *";
+}
+
+#page_reservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#page_reservation main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 980px;
+  width: 100%;
+}
+
+#page_reservation main .sec1_les_dates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#page_reservation main .sec1_les_dates h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 50px 0px;
+}
+
+#page_reservation main .sec1_les_dates .contact_aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#page_reservation main .sec1_les_dates .contact_aside .contact_et_photo h3 {
+  font-size: 1.5rem;
+  margin: 5px 0px;
+}
+
+#page_reservation main .sec1_les_dates .contact_aside .contact_et_photo img {
+  width: auto;
+  height: auto;
+  max-width: 350px;
+  margin: 0 30px 5px 0;
+}
+
+#page_reservation main .sec1_les_dates .contact_aside .contact_et_photo address a {
+  text-decoration: none;
+  color: black;
+  font-style: initial;
+}
+
+#page_reservation main .sec1_les_dates .contact_aside .tableau_reservation {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#page_reservation main .sec1_les_dates .contact_aside th {
+  text-align: left;
+  width: 150px;
+  vertical-align: top;
+}
+
+#page_reservation main .formulaire {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#page_reservation main .formulaire h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 50px 0px;
+}
+
+#page_reservation main .formulaire .coordonnees {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  border: none;
+  border-top: solid black 2px;
+  min-width: 800px;
+  min-height: 200px;
+}
+
+#page_reservation main .formulaire .coordonnees legend {
+  margin-left: 80px;
+  padding: 0px 20px;
+  color: #991a1a;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+#page_reservation main .formulaire .coordonnees div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 500px;
+  padding-right: 100px;
+}
+
+#page_reservation main .formulaire .coordonnees div label {
+  padding-right: 15px;
+}
+
+#page_reservation main .formulaire .coordonnees input {
+  height: 25px;
+  width: 200px;
+}
+
+#page_reservation main .formulaire .votre_ticket {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  min-width: 800px;
+  min-height: 200px;
+  border: none;
+  border-top: solid black 2px;
+}
+
+#page_reservation main .formulaire .votre_ticket legend {
+  margin-left: 80px;
+  padding: 0px 20px;
+  color: #991a1a;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+#page_reservation main .formulaire .votre_ticket div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 500px;
+  padding-right: 100px;
+}
+
+#page_reservation main .formulaire .votre_ticket div label {
+  padding-right: 15px;
+}
+
+#page_reservation main .formulaire .votre_ticket div input,
+#page_reservation main .formulaire .votre_ticket div select {
+  width: 200px;
+  height: 25px;
+}
+
+#page_reservation main .formulaire .creation_compte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  min-width: 800px;
+  min-height: 150px;
+  border: none;
+  border-top: solid black 2px;
+}
+
+#page_reservation main .formulaire .creation_compte legend {
+  margin-left: 80px;
+  padding: 0px 20px;
+  color: #991a1a;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+#page_reservation main .formulaire .creation_compte div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 500px;
+  padding-right: 100px;
+}
+
+#page_reservation main .formulaire .creation_compte div label {
+  padding-right: 15px;
+}
+
+#page_reservation main .formulaire .creation_compte div input,
+#page_reservation main .formulaire .creation_compte div select {
+  width: 200px;
+  height: 25px;
+}
+
+#page_reservation main .formulaire .button_end {
+  margin: 50px 0 90px 0;
 }
 /*# sourceMappingURL=style.css.map */

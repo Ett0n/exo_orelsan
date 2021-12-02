@@ -2,6 +2,181 @@
   content: " *";
 }
 
-.page_reservation > body {
+#page_reservation {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#page_reservation main {
+  display: flex;
+  flex-direction: column;
+  max-width: 980px;
+  width: 100%;
+
+  & .sec1_les_dates {
+    //la première section PRINCIPALE de la page, contient h1 + sous-section dates + aside (tableau)
+    display: flex;
+    flex-direction: column;
+
+    & h1 {
+      align-self: center;
+      margin: 50px 0px;
+    }
+
+    & .contact_aside {
+      display: flex;
+      justify-content: space-between;
+      & .contact_et_photo {
+        //sous-section dans "Les Dates" contenant la photo + contact + adress
+
+        & h3 {
+          font-size: 1.5rem;
+          margin: 5px 0px;
+        }
+
+        & img {
+          width: auto;
+          height: auto;
+          max-width: 350px;
+          margin: 0 30px 5px 0;
+        }
+        & address a {
+          text-decoration: none;
+          color: black;
+          font-style: initial;
+        }
+      }
+
+      & .tableau_reservation {
+        //sous-section, contient le "aside" et l'entièretée du tableau.
+        position: relative;
+        display: flex;
+      }
+      & th {
+        text-align: left;
+        width: 150px;
+        vertical-align: top;
+      }
+    }
+  }
+  & .formulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & h1 {
+      align-self: center;
+      margin: 50px 0px;
+    }
+
+    & .coordonnees {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 5px;
+      border: none;
+      border-top: solid black 2px;
+      min-width: 800px;
+      min-height: 200px;
+
+      & legend {
+        margin-left: 80px;
+        padding: 0px 20px;
+        color: $fg-color1;
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+      & div {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-width: 500px;
+        padding-right: 100px;
+        & label {
+          padding-right: 15px;
+        }
+      }
+      & input {
+        height: 25px;
+        width: 200px;
+      }
+    }
+    & .votre_ticket {
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      gap: 5px;
+
+      min-width: 800px;
+      min-height: 200px;
+
+      border: none;
+      border-top: solid black 2px;
+
+      & legend {
+        margin-left: 80px;
+        padding: 0px 20px;
+        color: $fg-color1;
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+      & div {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-width: 500px;
+        padding-right: 100px;
+        & label {
+          padding-right: 15px;
+        }
+        & input,
+        select {
+          width: 200px;
+          height: 25px;
+        }
+      }
+    }
+
+    & .creation_compte {
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      gap: 5px;
+
+      min-width: 800px;
+      min-height: 150px;
+
+      border: none;
+      border-top: solid black 2px;
+
+      & legend {
+        margin-left: 80px;
+        padding: 0px 20px;
+        color: $fg-color1;
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+      & div {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-width: 500px;
+        padding-right: 100px;
+        & label {
+          padding-right: 15px;
+        }
+        & input,
+        select {
+          width: 200px;
+          height: 25px;
+        }
+      }
+    }
+    & .button_end {
+      margin: 50px 0 90px 0;
+    }
+  }
 }

@@ -14,147 +14,182 @@
     />
   </head>
 
-  <body>
+  <body id="page_reservation">
     <header>
       <h1>Le retour d'Orelsan</h1>
       <nav>
         <ul>
           <li><a href="index.html">Accueil</a></li>
           <li><a href="albums.html">Les albums</a></li>
-          <li><a href="reservation.html">Réservation</a></li>
+          <li class="active"><a href="reservation.html">Réservation</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section>
-        <img
-          src="img/album_perdu.jpeg"
-          alt="Perdu d'avance"
-          style="width: 200px; height: 200px"
-        />
-        <h2>Contact</h2>
-        <p>0498/245.256<br />info@orelsan7th.com</p>
-      </section>
-      <section>
-        <div>
-          <h1>Les dates</h1>
-          <table>
-            <tr>
-              <th>Date</th>
-              <th>Ville</th>
-              <th>Disponibilités</th>
-              <th>Réservation</th>
-            </tr>
-            <tr>
-              <td>21 janvier 2018</td>
-              <td>Paris</td>
-              <td>Oui</td>
-              <td><a href="#">Tickets</a></td>
-            </tr>
-            <tr>
-              <td>25 janvier 2018</td>
-              <td>Bruxelles</td>
-              <td>Oui</td>
-              <td><a href="#">Tickets</a></td>
-            </tr>
-            <tr>
-              <td>6 février 2018</td>
-              <td>Lille</td>
-              <td>Non</td>
-              <td><a href="#">Tickets</a></td>
-            </tr>
-            <tr>
-              <td>9 février 2018</td>
-              <td>Caen</td>
-              <td>Oui</td>
-              <td><a href="#">Tickets</a></td>
-            </tr>
-            <tr>
-              <td>12 février 2018</td>
-              <td>Marseille</td>
-              <td>Oui</td>
-              <td><a href="#">Tickets</a></td>
-            </tr>
-            <tr>
-              <td>14 février 2018</td>
-              <td>Toulouse</td>
-              <td>Oui</td>
-              <td><a href="#">Tickets</a></td>
-            </tr>
-          </table>
+      <section class="sec1_les_dates">
+        <h1>Les dates</h1>
+        <div class="contact_aside">
+          <div class="contact_et_photo">
+            <img src="img/concert.png" alt="Perdu d'avance" />
+            <h3>Contact</h3>
+            <address>
+              <a href="tel:0498/245.256">0498/245.256</a> <br />
+              <a href="mailto:info@orelsan7th.com">info@orelsan7th.com</a>
+            </address>
+          </div>
+
+          <aside class="tableau_reservation">
+            <table>
+              <tr>
+                <th>Date</th>
+                <th>Ville</th>
+                <th>Disponibilités</th>
+                <th>Réservation</th>
+              </tr>
+              <tr>
+                <td>21 janvier 2018</td>
+                <td>Paris</td>
+                <td>Oui</td>
+                <td><a href="#" class="btn">Tickets</a></td>
+              </tr>
+              <tr>
+                <td>25 janvier 2018</td>
+                <td>Bruxelles</td>
+                <td>Oui</td>
+                <td><a href="#" class="btn">Tickets</a></td>
+              </tr>
+              <tr>
+                <td>6 février 2018</td>
+                <td>Lille</td>
+                <td>Non</td>
+                <td><a href="#" class="btn">Tickets</a></td>
+              </tr>
+              <tr>
+                <td>9 février 2018</td>
+                <td>Caen</td>
+                <td>Oui</td>
+                <td><a href="#" class="btn">Tickets</a></td>
+              </tr>
+              <tr>
+                <td>12 février 2018</td>
+                <td>Marseille</td>
+                <td>Oui</td>
+                <td><a href="#" class="btn">Tickets</a></td>
+              </tr>
+              <tr>
+                <td>14 février 2018</td>
+                <td>Toulouse</td>
+                <td>Oui</td>
+                <td><a href="#" class="btn">Tickets</a></td>
+              </tr>
+            </table>
+          </aside>
         </div>
       </section>
 
-      <form action="#" method="post">
-        <section>
-          <h1>Réservation</h1>
-          <h2>Coordonnées</h2>
+      <form action="#" method="post" class="formulaire">
+        <h1>Réservation</h1>
+        <fieldset class="coordonnees">
+          <legend>Coordonnées</legend>
+          <div>
+            <label for="name_fld" class="required">Nom</label>
+            <input id="name_fld" name="name_fld" type="text" required />
+          </div>
+          <div>
+            <label for="prenom_fld" class="required">Prénom</label>
+            <input id="prenom_fld" name="prenom_fld" type="text" required />
+          </div>
+          <div>
+            <label for="mail_fld" class="required">E-mail</label>
+            <input
+              id="mail_fld"
+              name="mail_fld"
+              type="email"
+              placeholder="me@domaine.be"
+              required
+            />
+          </div>
+          <div>
+            <label for="phone_fld">Téléphone</label>
+            <input id="phone_fld" name="phone_fld" type="tel" />
+          </div>
+        </fieldset>
 
-          <label for="name_fld">Nom</label>
-          <input id="name_fld" name="name_fld" type="text" required />
+        <fieldset class="votre_ticket">
+          <legend>Votre Ticket</legend>
+          <div>
+            <label for="ville" class="required">Ville</label>
+            <select id="ville" name="ville">
+              <option value="paris">Paris</option>
+              <option value="bruxelles">Bruxelles</option>
+              <option value="lille">Lille</option>
+              <option value="caen">Caen</option>
+              <option value="marseille">Marseille</option>
+              <option value="toulouse">Toulouse</option>
+            </select>
+          </div>
+          <div>
+            <label for="date_fld" class="required">Date du concert</label>
+            <input id="date_fld" name="date_fld" type="text" required />
+          </div>
+          <div>
+            <label for="tentacles" class="required">Nombre de tickets</label>
+            <input
+              type="number"
+              id="tentacles"
+              name="tentacles"
+              min="0"
+              max="10"
+              placeholder="0"
+              required
+            />
+          </div>
+        </fieldset>
 
-          <label for="prenom_fld">Prénom</label>
-          <input id="prenom_fld" name="prenom_fld" type="text" required />
+        <fieldset class="creation_compte">
+          <legend>Créer un compte</legend>
+          <div>
+            <label for="login_fld">Login</label>
+            <input id="login_fld" name="login_fld" type="text" required />
+          </div>
 
-          <label for="mail_fld">E-mail :</label>
-          <input
-            id="mail_fld"
-            name="mail_fld"
-            type="email"
-            placeholder="me@domaine.be"
-            required
-          />
+          <div>
+            <label for="mdp_fld">Mot de passe</label>
+            <input id="mdp_fld" name="mdp_fld" type="password" />
+          </div>
+        </fieldset>
 
-          <label for="phone_fld">Téléphone</label>
-          <input id="phone_fld" name="phone_fld" type="tel" />
-        </section>
-
-        <section>
-          <h1>Votre Ticket</h1>
-          <label for="ville">Ville</label>
-          <select id="ville" name="ville">
-            <option value="paris">Paris</option>
-            <option value="bruxelles">Bruxelles</option>
-            <option value="lille">Lille</option>
-            <option value="caen">Caen</option>
-            <option value="marseille">Marseille</option>
-            <option value="toulouse">Toulouse</option>
-          </select>
-
-          <label for="date_fld">Date du concert</label>
-          <input id="date_fld" name="date_fld" type="text" required />
-
-          <label for="tentacles">Nombre de tickets</label>
-          <input
-            type="number"
-            id="tentacles"
-            name="tentacles"
-            min="0"
-            max="10"
-            required
-          />
-        </section>
-
-        <section>
-          <h2>Créer un compte</h2>
-          <label for="login_fld">Login</label>
-          <input id="login_fld" name="login_fld" type="text" required />
-
-          <label for="mdp_fld">Mot de passe</label>
-          <input id="mdp_fld" name="mdp_fld" type="password" />
+        <section class="button_end">
+          <button type="submit" class="btn">Annuler</button>
+          <button type="submit" class="btn">Commander</button>
         </section>
       </form>
-
       <section>
-        <button type="submit" class="btn">Annuler</button>
-        <button type="submit" class="btn">Commander</button>
+        <!-- les logos des réseaux sociaux-->
+        <ul class="social_list">
+          <li>
+            <a href="#">
+              <i class="fab fa-facebook-f"><span>Facebook</span></i></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fab fa-twitter"><span>Twitter</span></i></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fab fa-instagram"><span>Instagram</span></i></a
+            >
+          </li>
+        </ul>
       </section>
     </main>
 
     <footer>
       <section class="contact">
-        <h1>Contact</h1>
+        <h3>Contact</h3>
         <address>
           <a href="tel:0498/245.256">0498/245.256</a> <br />
           <a href="mailto:info@orelsan7th.com">info@orelsan7th.com</a>
@@ -162,7 +197,7 @@
       </section>
 
       <section class="dates">
-        <h1>Prochaines dates de tournée</h1>
+        <h3>Prochaines dates de tournée</h3>
         <ul>
           <li>25 janvier - Paris</li>
           <li>28 janvier - Bruxelles</li>
@@ -171,7 +206,7 @@
       </section>
 
       <section>
-        <h1>Navigation</h1>
+        <h3>Navigation</h3>
         <nav>
           <ul>
             <li><a href="index.html">Accueil</a></li>

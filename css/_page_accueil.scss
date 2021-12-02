@@ -9,7 +9,6 @@
   max-width: 980px;
   width: 100%;
   align-self: center;
-  background-color: darkgreen;
   gap: 50px;
 
   & .accueil_sec1 {
@@ -22,12 +21,99 @@
     h1 {
       text-transform: uppercase;
       font-weight: 800;
-      margin: 20px;
-      font-size: 3rem;
+      margin: 50px 0px;
     }
   }
 
   & .accueil_sec2 {
-    background-color: yellow;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+
+    & .sec2_group_paragraphe {
+      display: flex;
+      flex-direction: column;
+
+      & h2 {
+        margin: 0px 0px 50px 0px;
+        align-self: center;
+      }
+
+      & p {
+        padding: 0px 30px 10px 0px;
+      }
+
+      & .para_buttons {
+        margin-top: 50px;
+        display: flex;
+        gap: 5px;
+      }
+    }
+
+    & aside {
+      display: flex;
+      flex-direction: column;
+      background-color: $fg-color1;
+      min-width: 250px;
+      min-height: 400px;
+      align-items: center;
+      justify-items: center;
+      padding: 20px 10px;
+
+      & img {
+        width: 200px;
+        height: 200px;
+      }
+      & li {
+        list-style-type: none;
+        padding-top: 12px;
+      }
+      & h3 {
+        font-size: 2rem;
+        color: $fg-color2;
+        margin: 20px 0px 8px 0px;
+      }
+
+      & p {
+        display: inline;
+        margin-right: 5px;
+
+        &.cat_titre {
+          color: $fg-color2;
+        }
+      }
+    }
+  }
+
+  & .accueil_sec3 {
+    display: flex;
+    flex-direction: column;
+    & h2,
+    p {
+      align-self: center;
+    }
+
+    & h2 {
+      margin: 50px 0px;
+    }
+
+    & .groupe_album {
+      margin: 50px 0px 150px 0px;
+      & ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      & li {
+        list-style-type: none;
+      }
+      & span {
+        display: none;
+      }
+    }
+
+    & .album_cover {
+      width: 180px;
+      height: 180px;
+    }
   }
 }
