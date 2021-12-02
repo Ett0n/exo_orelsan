@@ -12,9 +12,22 @@
   font-size: 15px;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Oswald", sans-serif;
+}
+
 h1 {
   font-size: 2rem;
-  font-family: "Oswald", sans-serif;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
 }
 
 p {
@@ -199,7 +212,6 @@ h2 {
 .page_album > main > section > article > div > h2 {
   text-transform: uppercase;
   padding: 10px 0 25px 0;
-  font-size: 1.5rem;
 }
 
 .basique {
@@ -215,10 +227,14 @@ h2 {
           justify-content: center;
   text-transform: uppercase;
   padding: 10px 0 50px 0;
-  font-size: 2rem;
 }
 
 .social_list {
+  position: fixed;
+  right: 0;
+  top: 75%;
+  width: 8em;
+  margin-top: -2.5em;
   list-style-type: none;
 }
 
@@ -272,10 +288,10 @@ footer a {
   color: white;
 }
 
-footer h1 {
+footer h3 {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 0.5rem;
   margin-top: 30px;
   margin-bottom: 10px;
   text-align: center;
@@ -284,7 +300,6 @@ footer h1 {
 footer .contact address {
   font-family: "Montserrat", sans-serif;
   font-style: italic;
-  margin-top: 8px;
   font-size: 12px;
   text-align: center;
   margin-bottom: 8px !important;

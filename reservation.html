@@ -28,8 +28,11 @@
 
     <main>
       <section>
-        <img src="img/album_perdu.jpeg" alt"Perdu d'avance" style="width: 200px;
-        height: 200px">
+        <img
+          src="img/album_perdu.jpeg"
+          alt="Perdu d'avance"
+          style="width: 200px; height: 200px"
+        />
         <h2>Contact</h2>
         <p>0498/245.256<br />info@orelsan7th.com</p>
       </section>
@@ -82,84 +85,91 @@
           </table>
         </div>
       </section>
-      <section>
-        <h1>Réservation</h1>
-        <h2>Coordonnées</h2>
-        <form action="#" method="post">
-          <label for="name">Nom</label>
-          <input id="name_fld" name="name_fld" type="text" required/>
 
-          <label for="prenom">Prénom</label>
-          <input id="name_fld" name="prenom_fld" type="text" required/>
+      <form action="#" method="post">
+        <section>
+          <h1>Réservation</h1>
+          <h2>Coordonnées</h2>
 
-          <label for="mail">E-mail :</label>
+          <label for="name_fld">Nom</label>
+          <input id="name_fld" name="name_fld" type="text" required />
+
+          <label for="prenom_fld">Prénom</label>
+          <input id="prenom_fld" name="prenom_fld" type="text" required />
+
+          <label for="mail_fld">E-mail :</label>
           <input
             id="mail_fld"
             name="mail_fld"
             type="email"
             placeholder="me@domaine.be"
-            required/>
+            required
+          />
 
-          <label for="tel">Téléphone</label>
-          <input id="phone_fld" name="phone_fld" type="phone" />
-        </form>
-      </section>
-    </section>
+          <label for="phone_fld">Téléphone</label>
+          <input id="phone_fld" name="phone_fld" type="tel" />
+        </section>
 
-    <section>
-      <h1>Votre Ticket</h1>
-      <div>
-        <form action="#" method="post">
+        <section>
+          <h1>Votre Ticket</h1>
           <label for="ville">Ville</label>
-            <select id="ville" name="ville">
-              <option value="paris">Paris</option>
-              <option value="bruxelles">Bruxelles</option>
-              <option value="lille">Lille</option>
-              <option value="lille">Caen</option>
-              <option value="lille">Marseille</option>
-              <option value="lille">Toulouse</option>
-            </select>
+          <select id="ville" name="ville">
+            <option value="paris">Paris</option>
+            <option value="bruxelles">Bruxelles</option>
+            <option value="lille">Lille</option>
+            <option value="caen">Caen</option>
+            <option value="marseille">Marseille</option>
+            <option value="toulouse">Toulouse</option>
+          </select>
 
-          <label for="date">Date du concert</label>
-          <input id="date_fld" name="date_fld" type="text" required/>
+          <label for="date_fld">Date du concert</label>
+          <input id="date_fld" name="date_fld" type="text" required />
 
           <label for="tentacles">Nombre de tickets</label>
-          <input type="number" id="tentacles" name="tentacles"
-       min="0" max="10" required>
-        </form>
-    </section>
-    <section>
-      <h2>Créer un compte</h2>
-            <form action="#" method="post">
-              <label for="login">Login</label>
-              <input id="login_fld" name="login_fld" type="text" required/>
+          <input
+            type="number"
+            id="tentacles"
+            name="tentacles"
+            min="0"
+            max="10"
+            required
+          />
+        </section>
 
-              <label for="mdp">Mot de passe</label>
-              <input id="mdp_fld" name="mdp_fld" type="text" />
-            </form>
-    </section>
-    <section>
-      <button type="Annuler" class="btn">Annuler</button>
-              <button type="Commander" class="btn">Commander</button>
-    </section>
+        <section>
+          <h2>Créer un compte</h2>
+          <label for="login_fld">Login</label>
+          <input id="login_fld" name="login_fld" type="text" required />
+
+          <label for="mdp_fld">Mot de passe</label>
+          <input id="mdp_fld" name="mdp_fld" type="password" />
+        </section>
+      </form>
+
+      <section>
+        <button type="submit" class="btn">Annuler</button>
+        <button type="submit" class="btn">Commander</button>
+      </section>
     </main>
 
     <footer>
-      <section>
+      <section class="contact">
         <h1>Contact</h1>
-        <p>0498/245.256</p>
-        <p>info@orelsan7th.com</p>
+        <address>
+          <a href="tel:0498/245.256">0498/245.256</a> <br />
+          <a href="mailto:info@orelsan7th.com">info@orelsan7th.com</a>
+        </address>
       </section>
-      <section>
+
+      <section class="dates">
         <h1>Prochaines dates de tournée</h1>
-        <nav>
-          <ul>
-            <li>25 janvier - Paris</li>
-            <li>28 janvier - Bruxelles</li>
-            <li>5 février - Lille</li>
-          </ul>
-        </nav>
+        <ul>
+          <li>25 janvier - Paris</li>
+          <li>28 janvier - Bruxelles</li>
+          <li>5 février - Lille</li>
+        </ul>
       </section>
+
       <section>
         <h1>Navigation</h1>
         <nav>
